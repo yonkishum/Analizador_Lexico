@@ -246,19 +246,46 @@ public class PrincipalF extends javax.swing.JFrame {
                 errorConsole.append("No es un numero entero");
             }*/
             
-            for (int i = 0; i < mensajeCon.length(); i++){
-                   
+            for (int i = 0; i < mensajeCon.length(); i++){                  
                     switch(vectorCon[i]){
-                        case 'I':
-                            
-                            i++;
-                            
+                        case 'I':                           
+                            i++;                           
                             switch(vectorCon[i]){
                                 case 'N':     
                                     i++;
                                     switch(vectorCon[i]){
                                         case 'T':
-                                            //errorConsole.append("La declaración fue exitosa \n y el elemento es un Entero");
+                                            i++;
+                                            switch(vectorCon[i]){
+                                                case ' ':
+                                                    i++;
+                                                    char aux;
+                                                    if (vectorCon[i] == ' ') {
+                                                        errorConsole.append("Existe un error en la declaración de las variables");
+                                                        terminalArea.requestFocus();
+                                                    } else {
+                                                        
+                                                        do {
+                                                            aux = vectorCon[i];
+                                                        } while(vectorCon[i] == ';');
+                                                        
+                                                        int ultimoD = mensajeCon.length();
+                                                                    
+                                                        if(vectorCon[ultimoD-1] != ';'){
+                                                            errorConsole.append("Existe un error Léxico");
+                                                            JOptionPane.showMessageDialog(null, "Falta un ;", "Advertencia", JOptionPane.WARNING_MESSAGE);
+                                                            terminalArea.requestFocus();
+                                                        } else {
+                                                            errorConsole.append("Declaracion valida, no hubo ningun error\n");
+                                                            errorConsole.append("La variable " + aux + " es un Int.\n");
+                                                        }
+                                                    }
+                                                    break;
+                                                default:
+                                                    errorConsole.append("Existe un error en la declaración de las variables.");
+                                                    terminalArea.requestFocus();
+                                                    break;
+                                            }
                                             break;
                                         default:
                                             errorConsole.append("La declaración tiene tuvo un error, por favor corregirlo");
@@ -277,7 +304,6 @@ public class PrincipalF extends javax.swing.JFrame {
                         
                         
                     case 'F':
-                        //errorConsole.append("Numero Flotante");
                         i++;
                         switch(vectorCon[i]){
                             case 'L':
@@ -290,7 +316,6 @@ public class PrincipalF extends javax.swing.JFrame {
                                                 i++;
                                                 switch(vectorCon[i]){
                                                     case 'T':
-                                                        //errorConsole.append("Declaración valida el numero declarado es un Float.");
                                                         i++;
                                                         switch(vectorCon[i]){
                                                             case ' ':
@@ -355,6 +380,29 @@ public class PrincipalF extends javax.swing.JFrame {
                     case 'D': 
                         errorConsole.append("Numero Doble");
                             break;
+                    
+                    /* Aqui iran los caso de que se escriban en minusculas i, f, s, d*/
+                        
+                    case 'i':
+                        errorConsole.append("Por favor la declaración de las variables es con Mayúsculas");
+                        terminalArea.requestFocus();
+                        break;
+                        
+                    case 'f':
+                        errorConsole.append("Por favor la declaración de las variables es con Mayúsculas");
+                        terminalArea.requestFocus();
+                        break;
+                    
+                    case 's':
+                        errorConsole.append("Por favor la declaración de las variables es con Mayúsculas");
+                        terminalArea.requestFocus();
+                        break;
+                        
+                    case 'd':
+                        errorConsole.append("Por favor la declaración de las variables es con Mayúsculas");
+                        terminalArea.requestFocus();
+                        break;
+                        
                     default: errorConsole.append("La secuencia de caracteres es errónea");
                     }
                 
