@@ -1,0 +1,51 @@
+Se hara un multi swicht para ver que datos se estan metiendo ejemplo
+
+
+INT
+STRING
+FLOAT
+DOUBLE
+
+Cuando el swicht pase por la posicion [1] del vector
+
+
+analizara la primera letra y sera un Swicht anidado con otros y asi sucesivamente
+analizara toda la expresio...
+
+ejemplo 
+
+Palabra[] = String = INT A;
+
+Swicht(Palabra[0])
+
+    case I:
+        //Se entro al Integer
+        
+        Swicht(Palabra[1])
+
+            case N:
+                // sigue
+                
+                Swicht(Palabra[2])
+
+                    case T:
+                        //sigue
+                        
+                        Swicht(Palabra[3])
+                            case "":
+                                //Sigue
+                    case default:
+                        error lexico
+
+            case default:
+                //Error lexico
+        
+    case S:
+
+    case F:
+
+    case D:
+
+    case default:
+
+        mal escrito todo;
