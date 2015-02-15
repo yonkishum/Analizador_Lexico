@@ -557,7 +557,10 @@ public class PrincipalF extends javax.swing.JFrame {
             }
             
         //errorConsole.append(prueba);
-        }      
+        }
+        
+        /* Probando todo :D!*/
+        
     }//GEN-LAST:event_startButtonActionPerformed
 
     /**
