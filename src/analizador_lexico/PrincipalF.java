@@ -11,6 +11,7 @@ import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
 import javax.swing.Timer;
 
 /**
@@ -246,11 +247,30 @@ public class PrincipalF extends javax.swing.JFrame {
                 errorConsole.append("No es un numero entero");
             }*/
             
-            for (int i = 0; i < mensajeCon.length(); i++){                  
-                    switch(vectorCon[i]){
+            int i =0;
+            
+            if (vectorCon[i] == 'i') {
+                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables", "Advertencia", JOptionPane.WARNING_MESSAGE);
+                terminalArea.setText("");
+                terminalArea.requestFocus();
+            } else if (vectorCon[i] == 'f') {
+                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables", "Advertencia", JOptionPane.WARNING_MESSAGE);
+                terminalArea.setText("");
+                terminalArea.requestFocus();
+            } else if (vectorCon[i] == 's') {
+                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables", "Advertencia", JOptionPane.WARNING_MESSAGE);
+                terminalArea.setText("");
+                terminalArea.requestFocus();
+            } else if (vectorCon[i] == 'd') {
+                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables", "Advertencia", JOptionPane.WARNING_MESSAGE);
+                terminalArea.setText("");
+                terminalArea.requestFocus();
+            } else {
+                for (i = 0; i < mensajeCon.length(); i++){                  
+                    switch(vectorCon[i]){ //SWITCH PRINCIPAL
                         case 'I':                           
-                            i++;                           
-                            switch(vectorCon[i]){
+                            i++;                   
+                            switch(vectorCon[i]){ //SWITCH DE LOS INTS
                                 case 'N':     
                                     i++;
                                     switch(vectorCon[i]){
@@ -299,13 +319,11 @@ public class PrincipalF extends javax.swing.JFrame {
                                     terminalArea.requestFocus();
                                     break;
                             }
+                        break; //Break de los INTS
 
-                        break;
-                        
-                        
                     case 'F':
                         i++;
-                        switch(vectorCon[i]){
+                        switch(vectorCon[i]){ //SWICHT DE LOS FLOATS
                             case 'L':
                                 i++;                          
                                 switch(vectorCon[i]){
@@ -370,46 +388,175 @@ public class PrincipalF extends javax.swing.JFrame {
                                 errorConsole.append("Existe un error en la declaración de las variables.");
                                 terminalArea.requestFocus();
                                 break;
-                        }
+                        }       
+                   break; //Break de los Floats
                         
-                        
-                            break;
                     case 'S':
-                        errorConsole.append("Elemento String");
-                            break;
+                        i++;
+                        switch(vectorCon[i]){ //SWICHT DE LOS STRINGS
+                            case 'T':
+                                i++;
+                                switch(vectorCon[i]){
+                                    case 'R':
+                                        i++;
+                                        switch(vectorCon[i]){
+                                            case 'I':
+                                                i++;
+                                                switch(vectorCon[i]){
+                                                    case 'N':
+                                                        i++;
+                                                        switch(vectorCon[i]){
+                                                            case 'G':
+                                                                i++;
+                                                                switch(vectorCon[i]){
+                                                                    case ' ':
+                                                                        i++;
+                                                                        char aux ;
+                                                                        if(vectorCon[i] == ' '){
+                                                                            errorConsole.append("Existe un error en la declaración de las variables.");
+                                                                            terminalArea.requestFocus();
+                                                                        } else {
+
+                                                                            do {
+                                                                                aux = vectorCon[i];
+                                                                            } while(vectorCon[i] == ';');
+
+                                                                            int ultimoD = mensajeCon.length();
+
+                                                                            if(vectorCon[ultimoD-1] != ';'){
+                                                                                errorConsole.append("Existe un error Léxico");
+                                                                                JOptionPane.showMessageDialog(null, "Falta un ;", "Advertencia", JOptionPane.WARNING_MESSAGE);
+                                                                                terminalArea.requestFocus();
+                                                                            } else {
+                                                                                errorConsole.append("Declaracion valida, no hubo ningun error\n");
+                                                                                errorConsole.append("La variable " + aux + " es un String.\n");
+                                                                            }
+                                                                        } 
+                                                                        break;
+                                                                    default:
+                                                                        errorConsole.append("Existe un error en la declaración de las variables.");
+                                                                        terminalArea.requestFocus();
+                                                                        break;
+                                                                }
+                                                                break;
+                                                            default:
+                                                                errorConsole.append("Existe un error en la declaración de las variables.");
+                                                                terminalArea.requestFocus();
+                                                                break;
+                                                        }
+                                                        break;
+                                                    default:
+                                                        errorConsole.append("Existe un error en la declaración de las variables.");
+                                                        terminalArea.requestFocus();
+                                                        break;
+                                                }
+                                                break;
+                                            default:
+                                                errorConsole.append("Existe un error en la declaración de las variables.");
+                                                terminalArea.requestFocus();
+                                                break;
+                                        }
+                                        break;
+                                    default:
+                                        errorConsole.append("Existe un error en la declaración de las variables.");
+                                        terminalArea.requestFocus();
+                                        break;
+                                }
+                                break;
+                            default:
+                                errorConsole.append("Existe un error en la declaración de las variables.");
+                                terminalArea.requestFocus();
+                                break;
+                        }
+                    break;
                     case 'D': 
-                        errorConsole.append("Numero Doble");
-                            break;
-                    
-                    /* Aqui iran los caso de que se escriban en minusculas i, f, s, d*/
-                        
-                    case 'i':
-                        errorConsole.append("Por favor la declaración de las variables es con Mayúsculas");
-                        terminalArea.requestFocus();
+                        i++;
+                        switch(vectorCon[i]){ //SWICHT PARA EVALUAR LOS DOUBLE
+                            case 'O':
+                                i++;
+                                switch(vectorCon[i]){
+                                    case 'U':
+                                        i++;
+                                        switch(vectorCon[i]){
+                                            case 'B':
+                                                i++;
+                                                switch(vectorCon[i]){
+                                                    case 'L':
+                                                        i++;
+                                                        switch(vectorCon[i]){
+                                                            case 'E':
+                                                                i++;
+                                                                switch(vectorCon[i]){
+                                                                    case ' ':
+                                                                        
+                                                                        i++;
+                                                                        char aux ;
+                                                                        if(vectorCon[i] == ' '){
+                                                                            errorConsole.append("Existe un error en la declaración de las variables.");
+                                                                            terminalArea.requestFocus();
+                                                                        } else {
+
+                                                                            do {
+                                                                                aux = vectorCon[i];
+                                                                            } while(vectorCon[i] == ';');
+
+                                                                            int ultimoD = mensajeCon.length();
+
+                                                                            if(vectorCon[ultimoD-1] != ';'){
+                                                                                errorConsole.append("Existe un error Léxico");
+                                                                                JOptionPane.showMessageDialog(null, "Falta un ;", "Advertencia", JOptionPane.WARNING_MESSAGE);
+                                                                                terminalArea.requestFocus();
+                                                                            } else {
+                                                                                errorConsole.append("Declaracion valida, no hubo ningun error\n");
+                                                                                errorConsole.append("La variable " + aux + " es un Double.\n");
+                                                                            }
+                                                                        }
+                                                                        
+                                                                        break;
+                                                                    default:
+                                                                        errorConsole.append("Existe un error en la declaración de las variables.");
+                                                                        terminalArea.requestFocus();
+                                                                        break;
+                                                                }
+                                                                break;
+                                                            default:
+                                                                errorConsole.append("Existe un error en la declaración de las variables.");
+                                                                terminalArea.requestFocus();
+                                                                break;
+                                                        }
+                                                        break;
+                                                    default:
+                                                        errorConsole.append("Existe un error en la declaración de las variables.");
+                                                        terminalArea.requestFocus();
+                                                        break;
+                                                }
+                                                break;
+                                            default:
+                                                errorConsole.append("Existe un error en la declaración de las variables.");
+                                                terminalArea.requestFocus();
+                                                break;
+                                        }
+                                        break;
+                                    default:
+                                        errorConsole.append("Existe un error en la declaración de las variables.");
+                                        terminalArea.requestFocus();
+                                        break;
+                                }
+                                break;
+                            default:
+                                errorConsole.append("Existe un error en la declaración de las variables.");
+                                terminalArea.requestFocus();
+                                break;
+                        }                       
+                        break;  //Secuencia final de Double                      
+                    default: 
+                        errorConsole.append("La secuencia de caracteres es errónea.\n");
                         break;
-                        
-                    case 'f':
-                        errorConsole.append("Por favor la declaración de las variables es con Mayúsculas");
-                        terminalArea.requestFocus();
-                        break;
-                    
-                    case 's':
-                        errorConsole.append("Por favor la declaración de las variables es con Mayúsculas");
-                        terminalArea.requestFocus();
-                        break;
-                        
-                    case 'd':
-                        errorConsole.append("Por favor la declaración de las variables es con Mayúsculas");
-                        terminalArea.requestFocus();
-                        break;
-                        
-                    default: errorConsole.append("La secuencia de caracteres es errónea");
-                    }
-                
+                    }                
+            }
             }
             
-            
-            //errorConsole.append(prueba);
+        //errorConsole.append(prueba);
         }      
     }//GEN-LAST:event_startButtonActionPerformed
 
@@ -445,9 +592,7 @@ public class PrincipalF extends javax.swing.JFrame {
             public void run() {
                 new PrincipalF().setVisible(true);
             }
-        });
-        
-        
+        });     
     }
     
     public static void salir(){
