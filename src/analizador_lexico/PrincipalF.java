@@ -550,7 +550,7 @@ public class PrincipalF extends javax.swing.JFrame {
                         }                       
                         break;  //Secuencia final de Double                      
                     default: 
-                        errorConsole.append("La secuencia de caracteres es errónea.\n");
+                        //errorConsole.append("La secuencia de caracteres es errónea.\n");
                         break;
                     }                
             }
