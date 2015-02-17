@@ -265,7 +265,7 @@ public class PrincipalF extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables", "Advertencia", JOptionPane.WARNING_MESSAGE);
                 terminalArea.setText("");
                 terminalArea.requestFocus();
-            } else {
+            } else{
                 for (i = 0; i < mensajeCon.length(); i++){                  
                     switch(vectorCon[i]){ //SWITCH PRINCIPAL
                         case 'I':                           
