@@ -19,6 +19,8 @@ import javax.swing.Timer;
  * @author Ikaros
  */
 public class PrincipalF extends javax.swing.JFrame {
+    
+    String nodo;
 
     /**
      * Creates new form PrincipalF
@@ -287,6 +289,14 @@ public class PrincipalF extends javax.swing.JFrame {
                                                         
                                                         do {
                                                             aux = vectorCon[i];
+                                                            
+                                                            if (String.valueOf(vectorCon[i+1]) == "="){
+                                                                nodo = String.valueOf(vectorCon[i]);
+                                                            } else {
+                                                                nodo = String.valueOf(vectorCon[i+2]);
+                                                                
+                                                            }
+                                                            
                                                         } while(vectorCon[i] == ';');
                                                         
                                                         int ultimoD = mensajeCon.length();
@@ -298,6 +308,7 @@ public class PrincipalF extends javax.swing.JFrame {
                                                         } else {
                                                             errorConsole.append("Declaracion valida, no hubo ningun error\n");
                                                             errorConsole.append("La variable " + aux + " es un Int.\n");
+                                                            errorConsole.append(nodo);
                                                         }
                                                     }
                                                     break;
