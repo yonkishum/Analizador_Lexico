@@ -11,7 +11,6 @@ import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JScrollPane;
 import javax.swing.Timer;
 
 /**
@@ -259,9 +258,10 @@ public class PrincipalF extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables", "Advertencia", JOptionPane.WARNING_MESSAGE);
                 terminalArea.setText("");
                 terminalArea.requestFocus();
-          */} else if ( (String.valueOf(vectorCon[i+4]).matches("[0-9&&[^a-z]]") || 
-                  String.valueOf(vectorCon[i+6]).matches("[0-9&&[^a-z]]") || 
-                  String.valueOf(vectorCon[i+7]).matches("[0-9&&[^a-z]]")) == true ){
+          */} else if ( 
+                 (String.valueOf(vectorCon[i+4]).matches("[0-9&&^[a-zA-Z]]") || 
+                  String.valueOf(vectorCon[i+6]).matches("[0-9&&^[a-zA-Z]]") || 
+                  String.valueOf(vectorCon[i+7]).matches("[0-9&&^[a-zA-Z]]")) != true ){
                 JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
             } /*else if (vectorCon[i] == 'f') {
                 JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables", "Advertencia", JOptionPane.WARNING_MESSAGE);
