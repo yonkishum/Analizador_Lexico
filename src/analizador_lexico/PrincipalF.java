@@ -234,6 +234,8 @@ public class PrincipalF extends javax.swing.JFrame {
         String mensajeCon =  terminalArea.getText();
         //String[] vectorCon = new String[] {mensajeCon};
         char[] vectorCon = mensajeCon.toCharArray();
+        
+        int longitud = vectorCon.length;
              
         if (mensajeCon.length()<1) {
             JOptionPane.showMessageDialog(null, "Por favor rellene con alguna cadena en la terminal.", "Advertencia", JOptionPane.WARNING_MESSAGE);
@@ -253,17 +255,18 @@ public class PrincipalF extends javax.swing.JFrame {
             if (String.valueOf(vectorCon[i]).matches("[ifsd]")){
                 
                 JOptionPane.showMessageDialog(null, "Error en la Declaracion de las Variables", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            
-            /*if (vectorCon[i] == 'i') {
+            } else if ((String.valueOf(vectorCon).matches("[0-9&&[^a-zA-Z]]")) != false ){
+                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
+            } else if ((String.valueOf(vectorCon).matches("[0-9&&[^a-zA-Z]]")) != false) {
+                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);                
+            } else if ((String.valueOf(vectorCon).matches("[0-9&&[^a-zA-Z]]")) != false) {
+                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
+            }        
+            /* if (vectorCon[i] == 'i') {
                 JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables", "Advertencia", JOptionPane.WARNING_MESSAGE);
                 terminalArea.setText("");
-                terminalArea.requestFocus();
-          */} else if ( 
-                 (String.valueOf(vectorCon[i+4]).matches("[0-9&&^[a-zA-Z]]") || 
-                  String.valueOf(vectorCon[i+6]).matches("[0-9&&^[a-zA-Z]]") || 
-                  String.valueOf(vectorCon[i+7]).matches("[0-9&&^[a-zA-Z]]")) != true ){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } /*else if (vectorCon[i] == 'f') {
+                terminalArea.requestFocus();             
+            } else if (vectorCon[i] == 'f') {
                 JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables", "Advertencia", JOptionPane.WARNING_MESSAGE);
                 terminalArea.setText("");
                 terminalArea.requestFocus();
