@@ -20,7 +20,7 @@ import javax.swing.Timer;
  */
 public class PrincipalF extends javax.swing.JFrame {
     
-    String nodo;
+    String nodo, nodo2;
 
     /**
      * Creates new form PrincipalF
