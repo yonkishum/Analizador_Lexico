@@ -267,69 +267,9 @@ public class PrincipalF extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables", "Advertencia", JOptionPane.WARNING_MESSAGE);
                 terminalArea.setText("");
                 terminalArea.requestFocus();
-            } else if (vectorCon[i+4] == '0'){
+            } else if (String.valueOf(vectorCon[i+4]).matches("[0-9]") || String.valueOf(vectorCon[i+6]).matches("[0-9]") || String.valueOf(vectorCon[i+7]).matches("[0-9]")){
                 JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+4] == '1'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+4] == '2'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+4] == '3'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+4] == '4'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+4] == '5'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+4] == '6'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+4] == '7'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+4] == '8'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+4] == '9'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+6] == '0'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+6] == '1'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+6] == '2'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+6] == '3'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+6] == '4'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+6] == '5'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+6] == '6'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+6] == '7'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+6] == '8'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+6] == '9'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+7] == '0'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+7] == '1'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+7] == '2'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+7] == '3'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+7] == '4'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+7] == '5'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+7] == '6'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+7] == '7'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+7] == '8'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if (vectorCon[i+7] == '9'){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            }
-            
-            else {
+            } else {
                 for (i = 0; i < mensajeCon.length(); i++){                  
                     switch(vectorCon[i]){ //SWITCH PRINCIPAL
                         case 'I':                           
@@ -419,7 +359,7 @@ public class PrincipalF extends javax.swing.JFrame {
                                                                     
                                                                     do {
                                                                         aux = vectorCon[i];
-                                                                    } while(vectorCon[i] == ';');
+                                                                    } while(vectorCon[i] == '=');
                                                                     
                                                                     int ultimoD = mensajeCon.length();
                                                                     
