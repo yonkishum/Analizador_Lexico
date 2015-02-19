@@ -255,11 +255,11 @@ public class PrincipalF extends javax.swing.JFrame {
             if (String.valueOf(vectorCon[i]).matches("[ifsd]")){
                 
                 JOptionPane.showMessageDialog(null, "Error en la Declaracion de las Variables", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if ((String.valueOf(vectorCon).matches("[0-9&&[^a-zA-Z]]")) != false ){
+            } else if ((String.valueOf(vectorCon[i+4]).matches("[0-9&&[^a-zA-Z]]")) != false ){
                 JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else if ((String.valueOf(vectorCon).matches("[0-9&&[^a-zA-Z]]")) != false) {
+            } else if ((String.valueOf(vectorCon[i+6]).matches("[0-9&&[^a-zA-Z]]")) != false) {
                 JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);                
-            } else if ((String.valueOf(vectorCon).matches("[0-9&&[^a-zA-Z]]")) != false) {
+            } else if ((String.valueOf(vectorCon[i+7]).matches("[0-9&&[^a-zA-Z]]")) != false) {
                 JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
             }        
             /* if (vectorCon[i] == 'i') {
