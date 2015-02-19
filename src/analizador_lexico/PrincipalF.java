@@ -255,7 +255,9 @@ public class PrincipalF extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables", "Advertencia", JOptionPane.WARNING_MESSAGE);
                 terminalArea.setText("");
                 terminalArea.requestFocus();
-            } else if (vectorCon[i] == 'f') {
+            } //else if (String.valueOf(vectorCon[i+4]).matches("[0-9]") || String.valueOf(vectorCon[i+6]).matches("[0-9]") || String.valueOf(vectorCon[i+7]).matches("[0-9]")){
+                //JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
+            /*}*/ else if (vectorCon[i] == 'f') {
                 JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables", "Advertencia", JOptionPane.WARNING_MESSAGE);
                 terminalArea.setText("");
                 terminalArea.requestFocus();
@@ -267,9 +269,7 @@ public class PrincipalF extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables", "Advertencia", JOptionPane.WARNING_MESSAGE);
                 terminalArea.setText("");
                 terminalArea.requestFocus();
-            } else if (String.valueOf(vectorCon[i+4]).matches("[0-9]") || String.valueOf(vectorCon[i+6]).matches("[0-9]") || String.valueOf(vectorCon[i+7]).matches("[0-9]")){
-                JOptionPane.showMessageDialog(null, "Error en la Declaración de las variables, las variables no puede comenzar con números", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            } else {
+            }  else {
                 for (i = 0; i < mensajeCon.length(); i++){                  
                     switch(vectorCon[i]){ //SWITCH PRINCIPAL
                         case 'I':                           
@@ -358,7 +358,7 @@ public class PrincipalF extends javax.swing.JFrame {
                                                                 } else {
                                                                     
                                                                     do {
-                                                                        aux = vectorCon[i];
+                                                                        aux = vectorCon[i++];
                                                                     } while(vectorCon[i] == '=');
                                                                     
                                                                     int ultimoD = mensajeCon.length();
